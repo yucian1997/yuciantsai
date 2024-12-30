@@ -1,5 +1,5 @@
 ---
-layout: archive-Current Research
+layout: archive-taxonomies
 title: Current Research
 permalink: /Current-Research/
 ---
