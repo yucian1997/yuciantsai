@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: combine
 title: Home
 ---
 
