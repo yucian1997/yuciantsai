@@ -1,5 +1,5 @@
 ---
-layout: archive-dates
+layout: pages
 title: Current Research
 permalink: /Current-Research/
 ---
