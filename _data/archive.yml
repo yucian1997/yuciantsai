@@ -1,12 +1,12 @@
-- type: Current Research 
+- type: dates
   title: Current Research 
   url: /Current-Research/
-- type: Previous Research 
+- type: dates
   title: Previous Research
   url: /Previous-Research/
-- type: Publications
+- type: dates
   title: Publications
   url: /Publications/
-- type: Honors and Awards
+- type: dates
   title: Honors and Awards
   url: /Honors-and-Awards/
