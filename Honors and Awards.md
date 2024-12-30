@@ -1,5 +1,5 @@
 ---
-layout: archive-dates
+layout: awards
 title: Honors and Awards
 permalink: /Honors-and-Awards/
 ---
