@@ -1,6 +1,8 @@
 title: My Jekyll Site
 description: A description of your site
 url: "https://github.com/yucian1997/yucian.github.io.git"  # Change to your GitHub Pages URL
+paginate: 5
+permalink: pretty
 
 # Use jekyll-remote-theme to import the theme
 #remote_theme: "jeffreytse/jekyll-theme-not-pure-poole"
