@@ -1,9 +1,12 @@
-- type: Previous Research 
-  title: Previous Research
-  url: /Previous-Research/
 - type: Current Research 
   title: Current Research 
   url: /Current-Research/
+- type: Previous Research 
+  title: Previous Research
+  url: /Previous-Research/
 - type: Publications
   title: Publications
   url: /Publications/
+- type: Honors and Awards
+  title: Honors and Awards
+  url: /Honors-and-Awards/
