@@ -3,7 +3,7 @@ layout: combine
 title: Home
 ---
 
-12345678
+1234567
 
 # Welcome to My Jekyll Site
 
