@@ -34,8 +34,6 @@ permalink: /Publications/
   {%- endfor -%}
 </div>
 
-<button onclick="backToTop()">Back to Top</button>
-
 <script>
   function backToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
