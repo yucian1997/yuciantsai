@@ -3,10 +3,12 @@ description: A description of your site
 url: "https://github.com/yucian1997/yucian.github.io.git"  # Change to your GitHub Pages URL
 
 # Use jekyll-remote-theme to import the theme
-remote_theme: "jeffreytse/jekyll-theme-not-pure-poole"
+#remote_theme: "jeffreytse/jekyll-theme-not-pure-poole"
 
 plugins:
   - jekyll-remote-theme
 
 # Optional: additional configurations for the theme
 # For more options, refer to the theme's documentation
+
+remote_theme: vszhub/not-pure-poole
