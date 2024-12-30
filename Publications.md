@@ -1,5 +1,5 @@
 ---
-layout: archive-dates
+layout: combine
 title: Publications
 permalink: /Publications/
 ---
