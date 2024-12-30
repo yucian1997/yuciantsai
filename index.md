@@ -1,7 +1,13 @@
 ---
-layout: home
-title: Home
+layout: combined
+title: My Page Title
 ---
+Your content goes here.
+
+#---
+#layout: home
+#title: Home
+#---
 
 123456789
 
