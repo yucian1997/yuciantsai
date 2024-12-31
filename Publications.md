@@ -2,7 +2,7 @@
 layout: publication 
 title: Publications
 permalink: /Publications/ 
----
+--- 
 {% include home-header.html %}
 
 <h1>{{ page.title }}</h1>
