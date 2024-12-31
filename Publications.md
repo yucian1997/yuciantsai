@@ -1,7 +1,7 @@
 ---
 layout: publication 
 title: Publications
-permalink: /Publications/
+permalink: /Publications/ 
 ---
 {% include home-header.html %}
 
