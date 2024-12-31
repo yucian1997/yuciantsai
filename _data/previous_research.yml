@@ -1,0 +1,9 @@
+- title: "Research Title 1"
+  date: "2023-06-01"
+  description: "Description of the research item 1."
+  image: "/assets/images/research1.jpg"
+
+- title: "Research Title 2"
+  date: "2022-08-15"
+  description: "Description of the research item 2."
+  image: "/assets/images/research2.jpg"
