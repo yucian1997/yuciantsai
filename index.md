@@ -1,5 +1,5 @@
 ---
-layout: aboutme
+layout: aboutme 
 title: Home
 ---
 
