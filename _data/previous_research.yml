@@ -1,6 +1,6 @@
 - title: "MJO at different stages of the convective cycle"
   date: "2023" 
-  description: "In summary, four different types of convection attribute to the energy recharge-discharge cycle of MJO. During the wet phases (P^'>0), the top-heavy ascending motion and negative shallow convection jointly stabilize the atmosphere by exporting the column MSE (⟨∂_t h⟩<0); whereas during the dry phases (P^'<0), the top-heavy descending motion and the positive shallow convection together destabilize the atmosphere through importing the column MSE (⟨∂_t h⟩>0). Moreover, the recharge (or discharge) phase leads the amplifying (or decaying) phase by a quarter cycle (π/2) is essential to maintain a robust energy recharge-discharge cycle to drive the eastward propagating MJOs."
+  description: "In summary, four different types of convection are attributed to the energy recharge-discharge cycle of MJO. During the wet phases (P^'>0), the top-heavy ascending motion and negative shallow convection jointly stabilize the atmosphere by exporting the column MSE (⟨∂_t h⟩<0); whereas during the dry phases (P^'<0), the top-heavy descending motion and the positive shallow convection together destabilize the atmosphere through importing the column MSE (⟨∂_t h⟩>0). Moreover, the recharge (or discharge) phase leads the amplifying (or decaying) phase is essential to maintain a robust energy recharge-discharge cycle to drive the eastward propagating MJOs."
   image: "/assets/images/Stage-Figure1.png"
 - title: "Distinct Features of MJO Event Types"
   date: "2022" 
