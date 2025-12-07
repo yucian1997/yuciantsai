@@ -33,7 +33,7 @@
   {% assign pdf_url_enc = pdf_url | url_encode %}
   {% assign viewer_url = site.baseurl | append: "/assets/pdfjs/viewer.html?file=" | append: pdf_url_enc %}
 
-  <iframe src="{{ viewer_url }}" class="pdf-viewer viewer-full" title="Yu‑Cian's CV (PDF viewer)">
+  <iframe src="https://yucian1997.github.io/yuciantsai/assets/yucian-tsai-cv.pdf" class="pdf-viewer viewer-full" title="Yu‑Cian's CV">
     <div class="pdf-fallback">
       <p>Unable to display the PDF in your browser. You can <a href="{{ pdf_url }}" target="_blank" rel="noopener noreferrer">open the CV PDF in a new tab</a> or <a href="{{ pdf_url }}" download>download it</a>.</p>
     </div>
