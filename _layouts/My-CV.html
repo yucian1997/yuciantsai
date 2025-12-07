@@ -19,7 +19,23 @@
 
       <div class="content pure-u-1 pure-u-md-2-3">
         <header class="page-header">
-          {% include home-header.html %}
+          <!-- New horizontal menu bar -->
+          <div class="home-header-bar">
+            <a href="#" class="menu-toggle" id="menu-toggle">☰ Menu</a>
+            {% if site.data.archive %}
+            <ul class="home-header-menu pure-menu-list" id="menu">
+              {% for item in site.data.archive %}
+                <li class="pure-menu-item">
+                  <a href="{{ item.url | relative_url }}"
+                     class="pure-menu-link {% if page.url == item.url %}current-item{% endif %}">
+                    {{ item.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+
           <h1>{{ page.title }}</h1>
         </header>
 
@@ -69,6 +85,19 @@
       function backToTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
+
+      // Mobile menu toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        if (!menuToggle || !menu) return;
+
+        menuToggle.addEventListener('click', function(event) {
+          event.preventDefault();
+          menu.classList.toggle('open');
+        });
+      });
     </script>
 
     <!-- Styles -->
@@ -107,6 +136,74 @@
 
       .awards img {
         margin-top: 10px;
+      }
+
+      /* Header menu styles */
+      .home-header-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+        font-size: 16px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .home-header-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .home-header-menu li {
+        display: inline-block;
+        margin-left: 1rem;
+      }
+
+      .home-header-menu .pure-menu-link {
+        text-decoration: none;
+      }
+
+      .home-header-menu .current-item {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      /* Responsive behavior: collapse menu on small screens */
+      @media (max-width: 768px) {
+        .home-header-bar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .home-header-menu {
+          display: none;
+          margin-top: 0.5rem;
+        }
+
+        .home-header-menu.open {
+          display: block;
+        }
+
+        .home-header-menu li {
+          display: block;
+          margin: 0.25rem 0;
+        }
+      }
+
+      /* Desktop: show menu inline, hide the "Menu" label if you want */
+      @media (min-width: 769px) {
+        .home-header-menu {
+          display: flex;
+        }
+
+        .home-header-menu li {
+          margin-left: 1rem;
+        }
       }
     </style>
 
