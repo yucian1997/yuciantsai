@@ -1,7 +1,7 @@
 ---
-title: "CV — Yu‑Cian Tsai"
+title: "Yu-Cian's CV"
 layout: default
-pdf_file: "/assets/yucian-tsai-cv.pdf"
+pdf_file: "/yuciantsai/assets/Yu-Cian%20Tsai_CV.pdf"
 ---
 
 # My CV
