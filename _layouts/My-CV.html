@@ -19,9 +19,10 @@
 
       <div class="content pure-u-1 pure-u-md-2-3">
         <header class="page-header">
-          <!-- New horizontal menu bar -->
+          <!-- Header bar with toggleable menu -->
           <div class="home-header-bar">
-            <button type="button" id="menu-toggle" class="menu-toggle">☰ Menu</button>
+            <button type="button" class="menu-toggle" id="menu-toggle">☰ Menu</button>
+
             {% if site.data.archive %}
             <ul class="home-header-menu pure-menu-list" id="menu">
               {% for item in site.data.archive %}
@@ -38,6 +39,10 @@
 
           <h1>{{ page.title }}</h1>
         </header>
+
+        <div class="research-content">
+          {% include current-research-content.html %}
+        </div>
 
         <!-- ===================================================== -->
         <!--                    PDF VIEWER SECTION                 -->
@@ -86,7 +91,7 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      // Mobile menu toggle
+      // Menu toggle (hidden by default, shown only when open)
       document.addEventListener('DOMContentLoaded', function() {
         const menuToggle = document.getElementById('menu-toggle');
         const menu = document.getElementById('menu');
@@ -94,7 +99,7 @@
         if (!menuToggle || !menu) return;
 
         menuToggle.addEventListener('click', function(event) {
-          event.preventDefault();
+          event.preventDefault(); // harmless for <button>, but fine
           menu.classList.toggle('open');
         });
       });
@@ -138,21 +143,25 @@
         margin-top: 10px;
       }
 
-      /* Header menu styles */
+      /* Header menu + toggle styles */
       .home-header-bar {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 1rem;
         margin-bottom: 1rem;
       }
 
       .menu-toggle {
-        display: inline-block;
         font-size: 16px;
-        text-decoration: none;
         cursor: pointer;
+        padding: 4px 8px;
+        background: transparent;
+        border: 1px solid #ccc;
+        border-radius: 4px;
       }
 
+      /* Hide menu by default */
       .home-header-menu {
         display: none;
         list-style: none;
@@ -160,9 +169,13 @@
         padding: 0;
       }
 
+      /* Show menu only when .open is added by JS */
+      .home-header-menu.open {
+        display: block;
+      }
+
       .home-header-menu li {
-        display: inline-block;
-        margin-left: 1rem;
+        margin: 0.25rem 0;
       }
 
       .home-header-menu .pure-menu-link {
@@ -174,36 +187,14 @@
         text-decoration: underline;
       }
 
-      /* Responsive behavior: collapse menu on small screens */
-      @media (max-width: 768px) {
-        .home-header-bar {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .home-header-menu {
-          display: none;
-          margin-top: 0.5rem;
-        }
-
-        .home-header-menu.open {
-          display: block;
-        }
-
-        .home-header-menu li {
-          display: block;
-          margin: 0.25rem 0;
-        }
-      }
-
-      /* Desktop: show menu inline, hide the "Menu" label if you want */
+      /* Optional: make open menu horizontal on wider screens */
       @media (min-width: 769px) {
-        .home-header-menu {
+        .home-header-menu.open {
           display: flex;
+          gap: 1rem;
         }
-
         .home-header-menu li {
-          margin-left: 1rem;
+          margin: 0;
         }
       }
     </style>
