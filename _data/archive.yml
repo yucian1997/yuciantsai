@@ -13,3 +13,6 @@
 - type: dates
   title: What's Happened
   url: /Whats-Happened/
+- type: dates
+  title: My CV
+  url: /My-CV/
