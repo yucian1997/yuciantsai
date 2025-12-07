@@ -8,4 +8,4 @@ pdf_file: "/assets/yucian-tsai-cv.pdf"
 
 Use the jekyll-pdf-embed tag to show the PDF inline. This requires the plugin to be available during site build.
 
-{% pdf {{ page.pdf_file }} width=100% height=900px no_link %}
+{% pdf {{ page.pdf_file }} width=100% height=90vh no_link %}
