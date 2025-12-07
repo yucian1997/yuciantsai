@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title | default: "Yu‑Cian's CV" }}</title>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    .pdf-viewer { width: 100%; border: none; display: block; }
+    .viewer-full { min-height: 100vh; height: 100vh; }
+    @media (max-width: 640px) {
+      .viewer-full {
+        height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+        min-height: 60vh;
+      }
+    }
+    .pdf-fallback { padding: 1rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    .pdf-fallback a { color: #0366d6; text-decoration: none; }
+  </style>
+</head>
+<body>
+  {%- comment -%}
+  Build PDF URL in a way that works with GitHub Pages baseurl/site.url.
+  {%- endcomment -%}
+
+  {% assign pdf_path = "/assets/yucian-tsai-cv.pdf" %}
+  {% if site.url and site.url != "" %}
+    {% assign site_root = site.url | append: site.baseurl %}
+  {% else %}
+    {% assign site_root = site.baseurl %}
+  {% endif %}
+  {% assign pdf_url = site_root | append: pdf_path %}
+  {% assign pdf_url_enc = pdf_url | url_encode %}
+  {% assign viewer_url = site.baseurl | append: "/assets/pdfjs/viewer.html?file=" | append: pdf_url_enc %}
+
+  <iframe src="{{ viewer_url }}" class="pdf-viewer viewer-full" title="Yu‑Cian's CV (PDF viewer)">
+    <div class="pdf-fallback">
+      <p>Unable to display the PDF in your browser. You can <a href="{{ pdf_url }}" target="_blank" rel="noopener noreferrer">open the CV PDF in a new tab</a> or <a href="{{ pdf_url }}" download>download it</a>.</p>
+    </div>
+  </iframe>
+</body>
+</html>
