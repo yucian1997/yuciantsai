@@ -1,7 +1,7 @@
 ---
-title: "Yu-Cian's CV"
-layout: My-CV
-permalink: "/assets/yucian-tsai-cv.pdf"
+layout: current-research
+title: Yu-Cian's CV
+permalink: /My-CV/
 ---
 
 # My CV
