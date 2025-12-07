@@ -1,4 +1,8 @@
 source "https://rubygems.org"
 
-gem 'jekyll-remote-theme'
-gem 'jekyll-pdf-embed'
+gem "jekyll", "~> 4.2"
+
+group :jekyll_plugins do
+  gem "jekyll-pdf-embed"
+  gem "jekyll-remote-theme"
+end
