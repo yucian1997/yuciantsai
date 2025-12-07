@@ -1,49 +1,118 @@
 <!doctype html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ page.title | default: "Yu‑Cian's CV" }}</title>
-  <style>
-    html, body { height: 100%; margin: 0; }
-    .pdf-viewer { width: 100%; border: none; display: block; }
-    .viewer-full { min-height: 100vh; height: 100vh; }
-    @media (max-width: 640px) {
-      .viewer-full {
-        height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-        min-height: 60vh;
-      }
-    }
-    .pdf-fallback { padding: 1rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-    .pdf-fallback a { color: #0366d6; text-decoration: none; }
-  </style>
-</head>
-<body>
-  {%- comment -%}
-  Build PDF URL in a way that works with GitHub Pages baseurl/site.url.
-  {%- endcomment -%}
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
-  {% assign pdf_path = "https://yucian1997.github.io/yuciantsai/assets/yucian-tsai-cv.pdf" %}
-  {% if site.url and site.url != "" %}
-    {% assign site_root = site.url | append: site.baseurl %}
-  {% else %}
-    {% assign site_root = site.baseurl %}
-  {% endif %}
-  {% assign pdf_url = site_root | append: pdf_path %}
-  {% assign pdf_url_enc = pdf_url | url_encode %}
-  {% assign viewer_url = site.baseurl | append: "/assets/pdfjs/viewer.html?file=" | append: pdf_url_enc %}
+  {% include head.html %}
 
-  <iframe src="https://yucian1997.github.io/yuciantsai/assets/yucian-tsai-cv.pdf" class="pdf-viewer viewer-full" title="Yu‑Cian's CV">
-    <div class="pdf-fallback">
-      <p>Unable to display the PDF in your browser. You can <a href="{{ pdf_url }}" target="_blank" rel="noopener noreferrer">open the CV PDF in a new tab</a> or <a href="{{ pdf_url }}" download>download it</a>.</p>
-    </div>
-  </iframe>
-    <object data="https://yucian1997.github.io/yuciantsai/assets/yucian-tsai-cv.pdf" type="application/pdf" class="pdf-viewer viewer-full" aria-label="Yu‑Cian's CV PDF">
-    <iframe src="https://yucian1997.github.io/yuciantsai/assets/yucian-tsai-cv.pdf" class="pdf-viewer viewer-full" title="Yu‑Cian's CV (embedded PDF)">
-      <div class="pdf-fallback">
-        <p>Unable to display the PDF in your browser. You can <a href="https://yucian1997.github.io/yuciantsai/assets/yucian-tsai-cv.pdf" target="_blank" rel="noopener noreferrer">open the CV PDF in a new tab</a> or <a href="https://yucian1997.github.io/yuciantsai/assets/yucian-tsai-cv.pdf" download>download it</a>.</p>
+  <body>
+    <div class="container pure-g">
+      {%- assign cover_bg_color = site.cover_bg_color | default: 'rgb(40, 73, 77)' -%}
+      {%- assign cover_color = site.cover_color | default: 'rgb(255, 255, 255)' -%}
+      {%- assign cover_image = site.cover_image -%}
+      {%- if page.cover_bg_color -%}{% assign cover_bg_color = page.cover_bg_color %}{% endif %}
+      {%- if page.cover_color -%}{% assign cover_color = page.cover_color %}{% endif %}
+      {%- if page.cover_image -%}{% assign cover_image = page.cover_image %}{% endif %}
+
+      <div class="sidebar-left pure-u-1 pure-u-md-1-4"
+           style="background-color: {{ cover_bg_color }}; color: {{ cover_color }}; {% if cover_image %}background-image: url({{ cover_image | relative_url }});{% endif %}">
+        {% include sidebar-left.html %}
       </div>
-    </iframe>
-  </object>
-</body>
+
+      <div class="content pure-u-1 pure-u-md-2-3">
+        <header class="page-header">
+          {% include home-header.html %}
+          <h1>{{ page.title }}</h1>
+        </header>
+
+        <div class="research-content">
+          {% include current-research-content.html %}
+        </div>
+
+        <!-- ===================================================== -->
+        <!--                    PDF VIEWER SECTION                 -->
+        <!-- ===================================================== -->
+
+        <embed
+          src="https://yucian1997.github.io/yuciantsai/assets/yucian-tsai-cv.pdf"
+          type="application/pdf"
+          class="pdf-viewer viewer-full"
+          aria-label="Yu-Cian's CV PDF"
+        />
+
+        <div class="pdf-fallback">
+          <p>
+            Unable to display the PDF in your browser.
+            You can
+            <a href="https://yucian1997.github.io/yuciantsai/assets/yucian-tsai-cv.pdf"
+               target="_blank" rel="noopener noreferrer">open the CV in a new tab</a>
+            or
+            <a href="https://yucian1997.github.io/yuciantsai/assets/yucian-tsai-cv.pdf"
+               download>download it</a>.
+          </p>
+        </div>
+
+      </div> <!-- /content -->
+    </div> <!-- /container -->
+
+    <!-- FontAwesome -->
+    <script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+    {% include scroll.html %}
+
+    {% if page.math %}
+      {% include mathjax.html %}
+    {% endif %}
+
+    {% if jekyll.environment == 'production' and site.google_analytics %}
+      {% include google-analytics.html %}
+    {% endif %}
+
+    <!-- Back to Top -->
+    <a href="#" onclick="backToTop()" class="back-to-top">Top &#8648;</a>
+
+    <script>
+      function backToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    </script>
+
+    <!-- Styles -->
+    <style>
+      /* Back-to-top button */
+      .back-to-top {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background: #ffffff;
+        border: 1px solid #007bff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        color: #007bff;
+        font-size: 14px;
+        text-decoration: none;
+        z-index: 1000;
+      }
+      .back-to-top:hover {
+        background: #007bff;
+        color: #ffffff;
+      }
+
+      /* Embedded PDF Viewer */
+      .pdf-viewer.viewer-full {
+        width: 100%;
+        height: 90vh;
+        border: none;
+        margin-top: 20px;
+      }
+
+      .pdf-fallback {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      .awards img {
+        margin-top: 10px;
+      }
+    </style>
+
+  </body>
 </html>
