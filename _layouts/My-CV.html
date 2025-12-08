@@ -19,8 +19,9 @@
 
       <div class="content pure-u-1 pure-u-md-2-3">
         <header class="page-header">
-          <!-- Header stays visible always -->
+          <!-- Header bar with responsive menu -->
           <div class="home-header-bar">
+            <!-- Button: shown on mobile only via CSS -->
             <button type="button" class="menu-toggle" id="menu-toggle">☰ Menu</button>
 
             {% if site.data.archive %}
@@ -40,7 +41,7 @@
           <h1>{{ page.title }}</h1>
         </header>
 
-        <!-- (Removed research-content block as requested) -->
+        <!-- No research-content block here -->
 
         <!-- ========================= PDF VIEWER ========================== -->
         <embed
@@ -65,7 +66,20 @@
       </div> <!-- /content -->
     </div> <!-- /container -->
 
-    <!-- Back to top button -->
+    <!-- Optional FontAwesome (keep if you use icons elsewhere) -->
+    <script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+    {% include scroll.html %}
+
+    {% if page.math %}
+      {% include mathjax.html %}
+    {% endif %}
+
+    {% if jekyll.environment == 'production' and site.google_analytics %}
+      {% include google-analytics.html %}
+    {% endif %}
+
+    <!-- Back to Top -->
     <a href="#" onclick="backToTop()" class="back-to-top">Top &#8648;</a>
 
     <script>
@@ -73,7 +87,7 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      // Toggle ONLY the menu list (not the whole header)
+      // Responsive menu toggle for mobile
       document.addEventListener('DOMContentLoaded', function() {
         const menuToggle = document.getElementById('menu-toggle');
         const menu = document.getElementById('menu');
@@ -116,17 +130,48 @@
         margin-top: 20px;
       }
 
-      /* Header bar (always visible) */
+      .pdf-fallback {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      .awards img {
+        margin-top: 10px;
+      }
+
+      /* Header bar layout */
       .home-header-bar {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 1rem;
-        padding-top: 0.5rem;
       }
 
-      /* Toggle button */
+      /* Menu list defaults (desktop) */
+      .home-header-menu {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .home-header-menu li {
+        margin: 0;
+      }
+
+      .home-header-menu .pure-menu-link {
+        text-decoration: none;
+      }
+
+      .home-header-menu .current-item {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      /* Menu toggle button (desktop: hidden by default) */
       .menu-toggle {
+        display: none;
         font-size: 16px;
         padding: 4px 8px;
         border: 1px solid #ccc;
@@ -135,31 +180,26 @@
         border-radius: 4px;
       }
 
-      /* Hide menu by default */
-      .home-header-menu {
-        display: none;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
+      /* MOBILE: show button, hide menu by default */
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: inline-block;
+        }
 
-      /* Show menu only when .open is added */
-      .home-header-menu.open {
-        display: block;
-      }
+        .home-header-bar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
-      .home-header-menu li {
-        margin: 0.25rem 0;
-      }
+        .home-header-menu {
+          display: none;
+          flex-direction: column;
+          gap: 0.5rem;
+          margin-top: 0.75rem;
+        }
 
-      /* Desktop: show menu in a row when open */
-      @media (min-width: 769px) {
         .home-header-menu.open {
           display: flex;
-          gap: 1rem;
-        }
-        .home-header-menu li {
-          margin: 0;
         }
       }
     </style>
