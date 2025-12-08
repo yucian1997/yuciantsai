@@ -1,6 +1,6 @@
 ---
 layout: publication 
-title: Publications 
+title: Publications
 permalink: /Publications/
 ---   
 {% include home-header.html %}
