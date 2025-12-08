@@ -19,7 +19,7 @@
 
       <div class="content pure-u-1 pure-u-md-2-3">
         <header class="page-header">
-          <!-- Header bar with toggleable menu -->
+          <!-- Header stays visible always -->
           <div class="home-header-bar">
             <button type="button" class="menu-toggle" id="menu-toggle">☰ Menu</button>
 
@@ -40,14 +40,9 @@
           <h1>{{ page.title }}</h1>
         </header>
 
-        <div class="research-content">
-          {% include current-research-content.html %}
-        </div>
+        <!-- (Removed research-content block as requested) -->
 
-        <!-- ===================================================== -->
-        <!--                    PDF VIEWER SECTION                 -->
-        <!-- ===================================================== -->
-
+        <!-- ========================= PDF VIEWER ========================== -->
         <embed
           src="https://yucian1997.github.io/yuciantsai/assets/yucian-tsai-cv.pdf"
           type="application/pdf"
@@ -70,20 +65,7 @@
       </div> <!-- /content -->
     </div> <!-- /container -->
 
-    <!-- FontAwesome -->
-    <script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
-
-    {% include scroll.html %}
-
-    {% if page.math %}
-      {% include mathjax.html %}
-    {% endif %}
-
-    {% if jekyll.environment == 'production' and site.google_analytics %}
-      {% include google-analytics.html %}
-    {% endif %}
-
-    <!-- Back to Top -->
+    <!-- Back to top button -->
     <a href="#" onclick="backToTop()" class="back-to-top">Top &#8648;</a>
 
     <script>
@@ -91,7 +73,7 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      // Menu toggle (hidden by default, shown only when open)
+      // Toggle ONLY the menu list (not the whole header)
       document.addEventListener('DOMContentLoaded', function() {
         const menuToggle = document.getElementById('menu-toggle');
         const menu = document.getElementById('menu');
@@ -99,7 +81,7 @@
         if (!menuToggle || !menu) return;
 
         menuToggle.addEventListener('click', function(event) {
-          event.preventDefault(); // harmless for <button>, but fine
+          event.preventDefault();
           menu.classList.toggle('open');
         });
       });
@@ -126,7 +108,7 @@
         color: #ffffff;
       }
 
-      /* Embedded PDF Viewer */
+      /* PDF viewer */
       .pdf-viewer.viewer-full {
         width: 100%;
         height: 90vh;
@@ -134,30 +116,22 @@
         margin-top: 20px;
       }
 
-      .pdf-fallback {
-        margin-top: 10px;
-        font-size: 14px;
-      }
-
-      .awards img {
-        margin-top: 10px;
-      }
-
-      /* Header menu + toggle styles */
+      /* Header bar (always visible) */
       .home-header-bar {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 1rem;
         margin-bottom: 1rem;
+        padding-top: 0.5rem;
       }
 
+      /* Toggle button */
       .menu-toggle {
         font-size: 16px;
-        cursor: pointer;
         padding: 4px 8px;
-        background: transparent;
         border: 1px solid #ccc;
+        background: #fff;
+        cursor: pointer;
         border-radius: 4px;
       }
 
@@ -169,7 +143,7 @@
         padding: 0;
       }
 
-      /* Show menu only when .open is added by JS */
+      /* Show menu only when .open is added */
       .home-header-menu.open {
         display: block;
       }
@@ -178,16 +152,7 @@
         margin: 0.25rem 0;
       }
 
-      .home-header-menu .pure-menu-link {
-        text-decoration: none;
-      }
-
-      .home-header-menu .current-item {
-        font-weight: bold;
-        text-decoration: underline;
-      }
-
-      /* Optional: make open menu horizontal on wider screens */
+      /* Desktop: show menu in a row when open */
       @media (min-width: 769px) {
         .home-header-menu.open {
           display: flex;
