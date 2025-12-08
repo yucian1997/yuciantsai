@@ -19,29 +19,9 @@
 
       <div class="content pure-u-1 pure-u-md-2-3">
         <header class="page-header">
-          <!-- Header bar with responsive menu -->
-          <div class="home-header-bar">
-            <!-- Button: shown on mobile only via CSS -->
-            <button type="button" class="menu-toggle" id="menu-toggle">☰ Menu</button>
-
-            {% if site.data.archive %}
-            <ul class="home-header-menu pure-menu-list" id="menu">
-              {% for item in site.data.archive %}
-                <li class="pure-menu-item">
-                  <a href="{{ item.url | relative_url }}"
-                     class="pure-menu-link {% if page.url == item.url %}current-item{% endif %}">
-                    {{ item.title }}
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-          </div>
-
+          {% include home-header.html %}
           <h1>{{ page.title }}</h1>
         </header>
-
-        <!-- No research-content block here -->
 
         <!-- ========================= PDF VIEWER ========================== -->
         <embed
@@ -86,19 +66,6 @@
       function backToTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
-
-      // Responsive menu toggle for mobile
-      document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('menu');
-
-        if (!menuToggle || !menu) return;
-
-        menuToggle.addEventListener('click', function(event) {
-          event.preventDefault();
-          menu.classList.toggle('open');
-        });
-      });
     </script>
 
     <!-- Styles -->
@@ -137,76 +104,6 @@
 
       .awards img {
         margin-top: 10px;
-      }
-
-      /* Header bar layout */
-      .home-header-bar {
-        width: 100%;
-        height: 100%;
-      
-        -webkit-box-shadow: 0 1em 1em -.9em var(--border-color);
-           -moz-box-shadow: 0 1em 1em -.9em var(--border-color);
-                box-shadow: 0 1em 1em -.9em var(--border-color);
-      }
-
-      /* Menu list defaults (desktop) */
-      .home-header-menu {
-        a {
-          border-bottom: 1px solid rgba(0, 0, 0, 0);
-      
-          &:hover,
-          &:focus {
-            color: inherit;
-            background-color: inherit;
-            border-bottom-color: var(--link-color);
-          }
-        }
-
-      .home-header-menu li {
-        margin: 0;
-      }
-
-      .home-header-menu .pure-menu-link {
-        text-decoration: none;
-      }
-
-      .home-header-menu .current-item {
-        font-weight: bold;
-        text-decoration: underline;
-      }
-
-      /* Menu toggle button (desktop: hidden by default) */
-      .menu-toggle {
-        display: none;
-        font-size: 16px;
-        padding: 4px 8px;
-        border: 1px solid #ccc;
-        background: #fff;
-        cursor: pointer;
-        border-radius: 4px;
-      }
-
-      /* MOBILE: show button, hide menu by default */
-      @media (max-width: 768px) {
-        .menu-toggle {
-          display: inline-block;
-        }
-
-        .home-header-bar {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .home-header-menu {
-          display: none;
-          flex-direction: column;
-          gap: 0.5rem;
-          margin-top: 0.75rem;
-        }
-
-        .home-header-menu.open {
-          display: flex;
-        }
       }
     </style>
 
