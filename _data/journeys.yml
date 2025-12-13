@@ -1,7 +1,7 @@
 - date: 2025-11-21
   place: Colorado
   title: Northern light in Fort Collins
-  photo: assets/trip-images/northern-light_2025-10.jpg
+  photo: assets/trip-images/northern-light_2025-11.jpg
   description: my 2nd time to see Aurora in FoCo
   
 - date: 2025-10-20
@@ -20,32 +20,43 @@
   place: Colorado
   title: Colorado National Monument
   photo: assets/trip-images/monument_2025-08.jpg
-  description: 5-day Road trip
+  description: 5-day road trip
 
 - date: 2025-08-17
   place: Utah
   title: Canyonlands National Park
   photo: assets/trip-images/Cayonland_2025-08.jpg
-  description: 5-day Road trip
+  description: 5-day summer road trip
 
 - date: 2025-08-16
   place: Utah
   title: Arches National Park
   photo: assets/trip-images/Arches_2025-08.jpg
-  description: 5-day Road trip
+  description: 5-day summer road trip
 
 - date: 2025-08-15
   place: Colorado
   title: Mesa Verde National Park
   photo: assets/trip-images/Mesa_2025-08.jpg
-  description: 5-day Road trip
+  description: 5-day summer road trip
+
+- date: 2025-07-27
+  place: Massachusetts
+  title: Boston
+  photo: assets/trip-images/boston_2025-07.jpg
+  description: summer trip to the East Coast
 
 - date: 2025-07-26
   place: Maine
   title: Acadia National Park
   photo: assets/trip-images/Acadia_2025-07.jpg
-  description: Summer trip
+  description: summer trip to the East Coast
 
+- date: 2025-07-25
+  place: Maine
+  title: Portland
+  photo: assets/trip-images/Portland_2025-07-v2.jpg
+  description: summer trip to the East Coast
 
 - title: "2025 Spring Break Trip"
   date: 2025-03-21
