@@ -1,8 +1,26 @@
+- date: 2025-10-20
+  place: Colorado
+  title: Moose !!!
+  photo: assets/trip-images/Moose_2025-10.jpg
+  description: meet moose on my way
+  
 - date: 2025-10-09
   place: Colorado
   title: Sand Dune National Park
   photo: assets/trip-images/sand-dune_2025-09.jpg
   description: Fall Vibe
+
+- date: 2025-08-17
+  place: Utah
+  title: Canyonlands National Park
+  photo: assets/trip-images/Cayonland_2025-08.jpg
+  description: 5-day Road trip
+
+- date: 2025-08-16
+  place: Utah
+  title: Arches National Park
+  photo: assets/trip-images/Arches_2025-08.jpg
+  description: 5-day Road trip
 
 - date: 2025-08-15
   place: Colorado
@@ -15,11 +33,7 @@
   title: Acadia National Park
   photo: assets/trip-images/Acadia_2025-07.jpg
   description: Summer trip
-  
-- title: "2025 Summer Break Trip"
-  date: 2025-07-21
-  place: "Acadia, Maine & Moab, Utah"
-  description: "I haven’t had time to summarize this section (My Journey) on my website yet, but I’ll finish it soon!"
+
 
 - title: "2025 Spring Break Trip"
   date: 2025-03-21
