@@ -18,7 +18,7 @@ layout: default
         <article class="journey-card">
           {%- if post.photo -%}
             <div class="journey-card-image-wrapper">
-              <img src="{{ post.photo }}"
+              <img src="{{ post.photo | relative_url }}"
                    alt="{{ post.title }}"
                    class="journey-card-image">
             </div>
