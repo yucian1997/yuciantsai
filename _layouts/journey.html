@@ -1,0 +1,174 @@
+---
+layout: default
+---
+
+{% include home-header.html %}
+
+<h2>{{ page.title }}</h2>
+
+<div class="journey">
+  {%- assign journey = site.data.journeys | sort: 'date' | reverse -%}
+  {%- assign grouped_journey = journey | group_by_exp: "post", "post.date | date: '%Y'" -%}
+
+  {%- for year in grouped_journey -%}
+    <h3 class="journey-year">{{ year.name }}</h3>
+
+    <div class="journey-grid">
+      {%- for post in year.items -%}
+        <article class="journey-card">
+          {%- if post.photo -%}
+            <div class="journey-card-image-wrapper">
+              <img src="{{ post.photo }}"
+                   alt="{{ post.title }}"
+                   class="journey-card-image">
+            </div>
+          {%- endif -%}
+
+          <div class="journey-card-body">
+            <div class="journey-meta">
+              <span class="journey-date">
+                {{ post.date | date: "%B %d, %Y" }}
+              </span>
+              <span class="journey-place">
+                {{ post.place }}
+              </span>
+            </div>
+
+            <h4 class="journey-title">{{ post.title }}</h4>
+
+            {%- if post.description -%}
+              <p class="journey-description">
+                {{ post.description }}
+              </p>
+            {%- endif -%}
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  {%- endfor -%}
+</div>
+
+<a href="#" onclick="backToTop()" class="back-to-top">Top &#8648;</a>
+
+<script>
+  function backToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+<style>
+  /* Page title spacing */
+  h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .journey-year {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.25rem;
+  }
+
+  /* === CARD GRID (Bef-like visual layout) === */
+  .journey-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .journey-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .journey-card-image-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .journey-card-image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .journey-card:hover .journey-card-image {
+    transform: scale(1.03);
+  }
+
+  .journey-card-body {
+    padding: 0.9rem 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .journey-meta {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 0.35rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .journey-date::before {
+    content: "📅 ";
+  }
+
+  .journey-place::before {
+    content: "📍 ";
+  }
+
+  .journey-title {
+    font-size: 1.1rem;
+    margin: 0.2rem 0 0.5rem;
+  }
+
+  .journey-description {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+  }
+
+  /* Back to top – same behavior you used before, but a bit nicer */
+  .back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #ffffff;
+    border: 1px solid #007bff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #007bff;
+    font-size: 14px;
+    text-decoration: none;
+    z-index: 1000;
+  }
+
+  .back-to-top:hover {
+    background: #007bff;
+    color: #ffffff;
+  }
+
+  /* Mobile tweaks */
+  @media (max-width: 600px) {
+    .journey-card-image {
+      height: 200px;
+    }
+
+    .journey-year {
+      font-size: 1.2rem;
+    }
+  }
+</style>
