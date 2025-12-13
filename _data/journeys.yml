@@ -1,8 +1,20 @@
 - date: 2025-10-09
-  place: Sand Dune NP
-  title: travel with friends
+  place: Colorado
+  title: Sand Dune National Park
   photo: assets/trip-images/sand-dune_2025-09.jpg
-  description: SDNP
+  description: Fall Vibe
+
+- date: 2025-08-15
+  place: Colorado
+  title: Mesa Verde National Park
+  photo: assets/trip-images/Mesa_2025-08.jpg
+  description: 5-day Road trip
+
+- date: 2025-07-26
+  place: Maine
+  title: Acadia National Park
+  photo: assets/trip-images/Acadia_2025-07.jpg
+  description: Summer trip
   
 - title: "2025 Summer Break Trip"
   date: 2025-07-21
