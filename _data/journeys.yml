@@ -60,8 +60,8 @@
 
 - date: 2025-07-25
   place: Maine
-  title: Portland
-  photo: assets/trip-images/Portland_2025-07-v2.jpg
+  title: Portland Lighthouse
+  photo: assets/trip-images/portland_2025-07.jpg
   description: summer trip to the East Coast
 
 - date: 2025-06-08
@@ -90,6 +90,12 @@
 - title: "2024 Thanksgiving Trip"
   date: 2024-11-23
   place: "Springs, Colorado"
+
+- date: 2024-08-17
+  place: Colorado
+  title: Lake Haiyaha
+  photo: assets/trip-images/hai-lake_2024-10.jpg
+  description: sunrise, end of summer, and naive    
 
 - title: "2024 Spring Break Trip"
   date: 2024-03-21
