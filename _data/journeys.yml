@@ -16,11 +16,17 @@
   photo: assets/trip-images/sand-dune_2025-09.jpg
   description: mix summer and fall vibe
 
+- date: 2025-10-08
+  place: Colorado
+  title: Sunset at Sand Dune
+  photo: assets/trip-images/sand-dune-sunset_2025-10.jpg
+  description: car camping at the dune
+
 - date: 2025-08-18
   place: Colorado
   title: Colorado National Monument
   photo: assets/trip-images/monument_2025-08.jpg
-  description: 5-day road trip
+  description: 5-day summer road trip
 
 - date: 2025-08-17
   place: Utah
@@ -57,6 +63,24 @@
   title: Portland
   photo: assets/trip-images/Portland_2025-07-v2.jpg
   description: summer trip to the East Coast
+
+- date: 2025-06-08
+  place: Colorado
+  title: Rocky Mountain National Park 
+  photo: assets/trip-images/rocky_2025-05.jpg
+  description: after the thunderstorm
+
+- date: 2025-06-07
+  place: Colorado
+  title: Pikes Peak
+  photo: assets/trip-images/pike-peak_2025-05.jpg
+  description: railway station at 14,115 ft
+
+- date: 2025-06-06
+  place: Colorado
+  title: Garden of Gods
+  photo: assets/trip-images/god-garden_2025-05.jpg
+  description: summer vibe  
 
 - title: "2025 Spring Break Trip"
   date: 2025-03-21
