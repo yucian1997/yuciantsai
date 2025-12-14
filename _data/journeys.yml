@@ -96,16 +96,27 @@
 
 - date: 2024-08-17
   place: Colorado
+  title: Fall in the Rocky Mountains
+  photo: assets/trip-images/rocky_2024-08.jpg
+  description: between warm & indifferent 
+
+- date: 2024-08-17
+  place: Colorado
   title: Lake Haiyaha
   photo: assets/trip-images/hai-lake_2024-10.jpg
   description: sunrise, end of summer, and naive    
 
+- date: 2024-08-08
+  place: New York
+  title: Niagara Falls
+  photo: assets/trip-images/niagara_2024-08.jpg
+  description: sunrise with fog
 
-- date: 2024-07-05
-  place: Colorado
-  title: Dream Lake
-  photo: assets/trip-images/dream-lake_2024-06.jpg
-  description: untitled
+- date: 2024-08-07
+  place: Canada
+  title: Toronto Skyline
+  photo: assets/trip-images/toronto_2024-07.jpg
+  description: busy, busy, and busy
 
 - date: 2024-06-15
   place: Colorado
