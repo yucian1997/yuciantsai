@@ -48,7 +48,7 @@
 
 - date: 2025-07-27
   place: Massachusetts
-  title: Boston City
+  title: MIT in Boston City
   photo: assets/trip-images/boston_2025-07.jpg
   description: summer trip to the East Coast
 
@@ -76,12 +76,6 @@
   photo: assets/trip-images/pike-peak_2025-05.jpg
   description: railway station at 14,115 ft
 
-- date: 2025-06-06
-  place: Colorado
-  title: Garden of Gods
-  photo: assets/trip-images/god-garden_2025-05.jpg
-  description: summer vibe  
-
 - date: 2025-03-21
   place: Canada
   title: Banff National Park
@@ -90,9 +84,15 @@
 
 - date: 2025-03-20
   place: Canada
-  title: Gastown Steam Clock in Vancouver
+  title: Gastown in Vancouver
   photo: assets/trip-images/van_2025-03.jpg
   description: something undefined
+
+- date: 2024-11-23
+  place: Colorado
+  title: Garden of Gods
+  photo: assets/trip-images/god-garden_2025-05.jpg
+  description: Thanksgiving trip 
 
 - title: "2024 Thanksgiving Trip"
   date: 2024-11-23
