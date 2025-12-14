@@ -32,7 +32,7 @@
   place: Utah
   title: Canyonlands National Park
   photo: assets/trip-images/Cayonland_2025-08.jpg
-  description: 5-day summer road trip
+  description: cherish every moment in summertime
 
 - date: 2025-08-16
   place: Utah
@@ -56,7 +56,7 @@
   place: Maine
   title: Acadia National Park
   photo: assets/trip-images/Acadia_2025-07.jpg
-  description: summer trip to the East Coast
+  description: humid & hot summer
 
 - date: 2025-07-25
   place: Maine
@@ -99,6 +99,19 @@
   title: Lake Haiyaha
   photo: assets/trip-images/hai-lake_2024-10.jpg
   description: sunrise, end of summer, and naive    
+
+
+- date: 2024-07-05
+  place: Colorado
+  title: Dream Lake
+  photo: assets/trip-images/dream-lake_2024-06.jpg
+  description: untitled
+
+- date: 2024-06-15
+  place: Colorado
+  title: Emerald Lake
+  photo: assets/trip-images/emerald_2024-06.jpg
+  description: early summer, chilly weather 
 
 - title: "2024 Spring Break Trip"
   date: 2024-03-21
