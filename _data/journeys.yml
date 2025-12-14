@@ -82,10 +82,17 @@
   photo: assets/trip-images/god-garden_2025-05.jpg
   description: summer vibe  
 
-- title: "2025 Spring Break Trip"
-  date: 2025-03-21
-  place: "Banff, Canada"
-  description: "I haven’t had time to summarize this section (My Journey) on my website yet, but I’ll finish it soon!"
+- date: 2025-03-21
+  place: Canada
+  title: Banff National Park
+  photo: assets/trip-images/banff_2025-03.jpg
+  description: healing trip 
+
+- date: 2025-03-20
+  place: Canada
+  title: Gastown Steam Clock in Vancouver
+  photo: assets/trip-images/van_2025-03.jpg
+  description: something undefined
 
 - title: "2024 Thanksgiving Trip"
   date: 2024-11-23
