@@ -121,7 +121,7 @@
 - date: 2024-07-14
   place: Colorado
   title: Black Canyon National Park
-  photo: assets/trip-images/black_cayon_2024-07.jpg
+  photo: assets/trip-images/black_cayon_2024-07.JPG
   description: super hot
 
 - date: 2024-06-15
@@ -133,12 +133,8 @@
 - date: 2024-03-21
   place: California
   title: Yosemite National Park
-  photo: assets/trip-images/Yosemite_2024-03.jpg
+  photo: assets/trip-images/Yosemite_2024-03.JPG
   description: my first road trip
-
-- title: "2024 Spring Break Trip"
-  date: 2024-03-21
-  place: "SF & Yosemite, California"  
   
 - title: "2023 Thanksgiving Trip (will finish this part soon!!)"
   date: 2023-11-23
