@@ -130,6 +130,12 @@
   photo: assets/trip-images/emerald_2024-06.jpg
   description: early summer, chilly weather 
 
+- date: 2024-03-21
+  place: California
+  title: Yosemite National Park
+  photo: assets/trip-images/Yosemite_2024-03.jpg
+  description: my first road trip
+
 - title: "2024 Spring Break Trip"
   date: 2024-03-21
   place: "SF & Yosemite, California"  
