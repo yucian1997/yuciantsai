@@ -130,11 +130,23 @@
   photo: assets/trip-images/emerald_2024-06.jpg
   description: early summer, chilly weather 
 
-- date: 2024-03-21
+- date: 2024-03-25
   place: California
   title: Yosemite National Park
   photo: assets/trip-images/Yosemite_2024-03.JPG
   description: my first road trip
+
+- date: 2024-03-24
+  place: California
+  title: San Fransico City
+  photo: assets/trip-images/SF_2024-03.jpg
+  description: vacation vibe
+
+- date: 2024-01-20
+  place: Colorado
+  title: Sand Dune in Winter
+  photo: assets/trip-images/sand-dune_2024-01.jpg
+  description: chilly & dry  
   
 - title: "2023 Thanksgiving Trip (will finish this part soon!!)"
   date: 2023-11-23
