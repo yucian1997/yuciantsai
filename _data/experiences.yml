@@ -1,5 +1,11 @@
 - year: 2026
   items:
+    - date: June 2026
+      description: Selected to receive one of the UIFCW26 Student Travel Grants.
+    - date: April 2026
+      description: Research visit to the Bureau of Meteorology, Australia (for 6 weeks). 
+    - date: March 2026
+      description: Attended the Tropical AMS and presented my [EPEWs research](https://ams.confex.com/ams/37Hurricanes/meetingapp.cgi/Paper/480000)  
     - date: February 2026
       description: Invited Talk, TROPICOOL Seminar, University of Wisconsin-Madison. Presentation on S2S prediction of EPEWs and tropical variability.
     - date: January 2026
@@ -13,7 +19,7 @@
     - date: September 2025
       description: Published my first paper in CSU, *"Unified Forecast System Model Prediction of the Madden-Julian Oscillation and Its Influence on East Pacific During Boreal Summer"*
     - date: May 2025
-      description: Attend the [Dynamical Core Model Intercomparison Project (DCMIP) Summer school](https://sites.google.com/umich.edu/dcmip-2025/home?authuser=0)
+      description: Attended the [Dynamical Core Model Intercomparison Project (DCMIP) Summer school](https://sites.google.com/umich.edu/dcmip-2025/home?authuser=0)
     - date: January 2025
       description: Attended the American Meteorological Society (AMS) Annual Meeting and presented my [MJO research](https://ui.adsabs.harvard.edu/abs/2025AMS...10550258T/abstract).
 - year: 2024
@@ -21,7 +27,9 @@
     - date: October 2024
       description: Passed my preliminary exam and became a Ph.D. candidate!!!!
     - date: July 2024
-      description: Attended the [Unifying Innovations in Forecasting Capabilities Workshop](https://epic.noaa.gov/eventsposts/uifcw-2024/).
+      description: Attended the [Unifying Innovations in Forecasting Capabilities Workshop (UIFCW24)](https://epic.noaa.gov/eventsposts/uifcw-2024/).
+    - date: June 2024
+      description: Selected to receive one of the UIFCW24 Student Travel Grants.
 - year: 2023
   items:
     - date: August 2023
