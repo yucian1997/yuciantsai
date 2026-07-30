@@ -1,3 +1,27 @@
+- date: 2026-07-11
+  place: Wyoming
+  title: Yellowstone National Park
+  photo: assets/trip-images/yellow-stone_2026-07.jpg
+  description: with someone I value immensely
+
+- date: 2026-07-10
+  place: Wyoming
+  title: Grand Teton National Park
+  photo: assets/trip-images/teton_2026-07.jpg
+  description: with someone I value immensely
+  
+- date: 2026-06-04
+  place: Australia
+  title: Cuddly Koala Experience
+  photo: assets/trip-images/kola_2026-06.jpg
+  description: zzzzzzzzzz
+
+- date: 2026-06-03
+  place: Australia
+  title: Selfie with Kangaroo
+  photo: assets/trip-images/roo_2026-06.jpg
+  description: Not the AI photo
+  
 - date: 2026-06-02
   place: Australia
   title: Pink Lake in Hutt Lagoon
